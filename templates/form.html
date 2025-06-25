@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Gross Income</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="center-container">
+        <div class="form-card">
+            <h2 class="form-title">Prediksi Gross Income</h2>
+            <form action="/predict" method="post" class="predict-form">
+                <label for="unit_price">Unit Price:</label>
+                <input type="number" step="any" name="unit_price" id="unit_price" required>
+                <label for="quantity">Quantity:</label>
+                <input type="number" step="any" name="quantity" id="quantity" required>
+                <label for="tax">Tax 5%:</label>
+                <input type="number" step="any" name="tax" id="tax" required>
+                <button type="submit">Prediksi</button>
+            </form>
+            {% if prediction is defined %}
+                <hr>
+                <h3>Gross Income yang Diprediksi:</h3>
+                <p class="prediction">Rp {{ prediction|round(2) }}</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

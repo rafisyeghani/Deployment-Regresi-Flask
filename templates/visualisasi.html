@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Visualisasi Data Supermarket Sales</h2>
+<div class="visual-grid">
+    <div class="visual-card">
+        <img src="/static/histogram_gross_income.png" alt="Histogram Gross Income" class="visual-img">
+        <div class="visual-desc">
+            <strong>Distribusi Gross Income</strong>
+            <p>Menggambarkan distribusi gross income pada data penjualan supermarket.</p>
+        </div>
+    </div>
+    <div class="visual-card">
+        <img src="/static/heatmap_korelasi_fitur.png" alt="Heatmap Korelasi Fitur" class="visual-img">
+        <div class="visual-desc">
+            <strong>Korelasi Fitur</strong>
+            <p>Menggambarkan hubungan korelasi antar fitur utama pada dataset.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

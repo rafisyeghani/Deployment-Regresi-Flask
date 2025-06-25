@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="index-header">
+    <h2>Data Awal Supermarket Sales</h2>
+    <p>Berikut adalah dataset penjualan supermarket yang digunakan untuk analisis dan prediksi gross income.</p>
+</div>
+<div class="table-responsive">
+    {{ table|safe }}
+</div>
+{% endblock %}

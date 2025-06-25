@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="center-container">
+    <div class="form-card">
+        <h2 class="form-title">Hasil Prediksi Gross Income</h2>
+
+        <div class="predict-result-info">
+            <p><strong>Unit Price:</strong> {{ unit_price }}</p>
+            <p><strong>Quantity:</strong> {{ quantity }}</p>
+            <p><strong>Tax 5%:</strong> {{ tax }}</p>
+        </div>
+
+        <hr style="margin: 20px 0;">
+
+        <h3 style="color: #1565c0; margin-bottom: 10px;">Gross Income yang Diprediksi:</h3>
+        <p class="prediction">Rp {{ prediction|round(2) }}</p>
+
+        <a href="/predict" class="back-button" style="text-align: center;">Kembali</a>
+    </div>
+</div>
+{% endblock %}
